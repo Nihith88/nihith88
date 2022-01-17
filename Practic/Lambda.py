@@ -16,13 +16,13 @@ def to(f_param):
 to(f)
 
 
-def myfilter(numbers):
+def myfilter(numbers1):
     result = []  # результатом выполнения функции будет список
-    for number in numbers:
+    for number in numbers1:
         if number % 2 == 0:
             result.append(number)
     return result
 
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 25]
-print(myfilter(numbers))
+numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 25]
+print(myfilter(numbers1))
