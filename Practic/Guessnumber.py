@@ -6,18 +6,18 @@
 
 """
 import random
-min = 1
-max = 100
-compnumber = random.randint(min, max)
+minn = 1
+maxx = 100
+compnumber = random.randint(minn, maxx)
 while True:
     print("Это число {} ?" .format(compnumber))
     hint = input('Подсткажите: ваше чисо больше (>), меньше (<) или равно (любой символ)?  ')
     if hint == '<':
-        max = compnumber - 1
-        compnumber = random.randint(min, max)
+        maxx = compnumber - 1
+        compnumber = random.randint(minn, maxx)
     elif hint == '>':
-       min = compnumber + 1
-       compnumber = random.randint(min, max)
+       minn = compnumber + 1
+       compnumber = random.randint(minn, maxx)
     else:
         print("Какой я умный, я угадал ваше число {}!!!" .format(compnumber))
         break
