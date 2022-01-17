@@ -13,10 +13,10 @@ while True:
     print("Это число {} ?" .format(compnumber))
     hint = input('Подсткажите: ваше чисо больше (>), меньше (<) или равно (любой символ)?  ')
     if hint == '<':
-        max = compnumber
+        max = compnumber - 1
         compnumber = random.randint(min, max)
     elif hint == '>':
-       min = compnumber
+       min = compnumber + 1
        compnumber = random.randint(min, max)
     else:
         print("Какой я умный, я угадал ваше число {}!!!" .format(compnumber))
