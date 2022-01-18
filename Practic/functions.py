@@ -11,6 +11,7 @@ for number, winner in enumerate(winners, 1):
     print(winner, number)
 
 """
+              # Работа с функциями в последовательностях
 numbers = []  # Заполнение списка по диапазону
 for i in range(3):
     number = int(input('Insert number'))
@@ -18,6 +19,8 @@ for i in range(3):
 print(numbers)
 print(min(numbers))  # минимальный элемент последовательности
 print(max(numbers))  # максимальный
+print(sum(numbers))  # сумма элементов последовательности
+
 
 
 
