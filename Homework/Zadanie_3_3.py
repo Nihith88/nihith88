@@ -18,9 +18,9 @@ enemy = {'calling': 'Enemy', 'health': 100, 'damage': 40, 'armour': 1.4}
 def battle(hero, enemy):
    # while hero['health'] > 0:
    while True: # Цикл выполняется покуда дышат оба
-        uron1 = hero['damage'] / enemy['armour']
+        uron1 = hero['damage'] / enemy['armour']  # Урон 1
         print(hero['calling'], 'наносит удар с уроном ', round(uron1, 0))
-        enemy['health'] = enemy['health'] - round(uron1, 0)  # Первый удар
+        enemy['health'] = enemy['health'] - round(uron1, 0)
         print(enemy['calling'], 'получил урон ', round(uron1, 0), ', осталось ', enemy['health'], 'здоровья')
         if enemy['health'] <= 0:
             print(enemy['calling'], 'мертв. Победил', hero['calling'])
