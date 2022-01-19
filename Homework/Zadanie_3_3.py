@@ -7,16 +7,16 @@ attack(person1, person2). Примечание: имена аргументов 
 количество от health атакуемого. Функция должна сама работать со словарями и изменять их значения.
 """
 # Исходные данные от пользователя
-a = 1
+"""a = 1
 name = input('Кто ты, Воин? ')
 arm_class = float(input('А броня какого класса на тебе? (от 0 до 10):  '))
 arm_class = (arm_class / 10) + 1
 hero = {'calling': name, 'health': 100, 'damage': 40, 'armour': arm_class}
 enemy = {'calling': 'Enemy', 'health': 100, 'damage': 40, 'armour': 1.4}
-
+"""
 # Объявим функцию махача:
 def battle(hero, enemy):
-   # while hero['health'] > 0:
+   # Пока жив герой
    while True: # Цикл выполняется покуда дышат оба
         uron1 = hero['damage'] / enemy['armour']  # Урон 1
         print(hero['calling'], 'наносит удар с уроном ', round(uron1, 0))
@@ -26,7 +26,7 @@ def battle(hero, enemy):
             print(enemy['calling'], 'мертв. Победил', hero['calling'])
             print('Можете забрать доспехи ', enemy['calling'])
             break
-    # while enemy['health'] > 0:
+    # Пока жив враг
         uron2 = enemy['damage'] / hero['armour']
         print(enemy['calling'], 'наносит удар с уроном ', round(uron2, 0))
         hero['health'] = hero['health'] - round(uron2, 0)  # Ответный удар
@@ -36,7 +36,12 @@ def battle(hero, enemy):
             print(enemy['calling'], 'забрал всё ваше снаряжение')
             break
 
-
+a = 1
 while a != '0':
-    a = (input('В бой? (введите enter для продолжения, 0 для завершения:  '))
+    name = input('Кто ты, Воин? ')
+    arm_class = float(input('А броня какого класса на тебе? (от 0 до 10):  '))
+    arm_class = (arm_class / 10) + 1
+    hero = {'calling': name, 'health': 100, 'damage': 40, 'armour': arm_class}
+    enemy = {'calling': 'Enemy', 'health': 100, 'damage': 40, 'armour': 1.4}
     battle(hero, enemy)
+    a = (input('В бой? (введите enter для продолжения, 0 для завершения:  '))
